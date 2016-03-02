@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  person_id: 
+  dominant_foot_id: 
+  debut: 2016-03-01
+  position: MyText
+
+two:
+  person_id: 
+  dominant_foot_id: 
+  debut: 2016-03-01
+  position: MyText

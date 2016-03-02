@@ -1,0 +1,21 @@
+<%= form_for(@dominant_foot) do |f| %>
+  <% if @dominant_foot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dominant_foot.errors.count, "error") %> prohibited this dominant_foot from being saved:</h2>
+
+      <ul>
+      <% @dominant_foot.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
