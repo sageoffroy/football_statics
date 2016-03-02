@@ -70,6 +70,23 @@ person_list = [
   ["Alfredo ", "Grelak", "alfredo_grelak.png", "1970/06/20", 78	, 176, Nationality.where(name: "Argentina").first],
   ["Jorge", "Almirón", "jorge_almiron.png", "1971/06/19", 79	, 181, Nationality.where(name: "Argentina").first],
   ["Frank Darío", "Kudelka", "frank_kudelka.png", "1961/05/12", 86	, 180, Nationality.where(name: "Argentina").first]
+  # Jugadores River Plate
+    #Arqueros
+  ["Marcelo", "Barovero", "marcelo_barovero.png", "1984/02/18", 71, 181, Nationality.where(name: "Argentina").first],
+  ["Julio", "Chiarini", "julio_chiarini.png", "1982/03/04", 79, 181, Nationality.where(name: "Argentina").first],
+  ["Augusto", "Batalla", "augusto_batalla.png", "1996/04/30",  79, 185, Nationality.where(name: "Argentina").first],
+    #Defensores
+  ["Jonathan", "Maidana", "jonatha_maidana.png", "1985/07/29", 86, 185, Nationality.where(name: "Argentina").first],
+  ["Éder", "Álvarez Balanta", "eder_alvarez_balanta.png", "1993/02/28", 85, 182, Nationality.where(name: "Colombiana").first],
+  ["Milton", "Casco", "milton_casco.png", "1988/04/11", 71, 171, Nationality.where(name: "Argentina").first],
+  ["Leonel", "Vangioni", "leonel_vangioni.png", "1987/05/05", 73, 177, Nationality.where(name: "Argentina").first],
+  ["Gabriel", "Mercado", "gabriel_mercado.png", "1987/03/18", 83, 180, Nationality.where(name: "Argentina").first],
+  ["Emanuel", "Mammana", "emanuel_mammana.png", "1996/02/10", 70, 184, Nationality.where(name: "Argentina").first],
+  ["Leandro", "Vega", "leandro_vega.png", "1996/05/27", 70, 179, Nationality.where(name: "Argentina").first],
+    #Mediocampistas
+
+
+
 ]
 
 person_list.each do |first_name, last_name, picture, birth_date, weight, height, nationality_id|
@@ -121,5 +138,7 @@ team_list.each do |name, initials, foundation, members, stadium, shield|
     Team.create(name:name, initials:initials, foundation:foundation, members:members, stadium:stadium, shield:shield)
   end
 end
+
+
 
 
