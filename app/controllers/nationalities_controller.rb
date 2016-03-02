@@ -1,7 +1,4 @@
 class NationalitiesController < ApplicationController
-
-
-  validate_uniqueness_of :key_attribute
   before_action :set_nationality, only: [:show, :edit, :update, :destroy]
 
   # GET /nationalities

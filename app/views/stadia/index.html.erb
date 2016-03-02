@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Stadia</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Nickname</th>
+      <th>Foundation</th>
+      <th>Capacity</th>
+      <th>Picture</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stadia.each do |stadium| %>
+      <tr>
+        <td><%= stadium.name %></td>
+        <td><%= stadium.nickname %></td>
+        <td><%= stadium.foundation %></td>
+        <td><%= stadium.capacity %></td>
+        <td><%= stadium.picture %></td>
+        <td><%= link_to 'Show', stadium %></td>
+        <td><%= link_to 'Edit', edit_stadium_path(stadium) %></td>
+        <td><%= link_to 'Destroy', stadium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stadium', new_stadium_path %>
