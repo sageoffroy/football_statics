@@ -12,9 +12,21 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model 'Player' do
+    object_label_method do
+      :player_label_method
+    end
+  end
+
+
   def person_label_method
     "#{self.first_name} #{self.last_name}"
   end
+
+  def player_label_method
+    "#{self.person.first_name} #{self.person.last_name}"
+  end
+
 
   def description_label_method
     "#{self.description}"

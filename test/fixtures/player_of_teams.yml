@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player_id: 
+  team_id: 
+  contract_start: 2016-03-02
+  contract_end: 2016-03-02
+  shirt_number: 1
+
+two:
+  player_id: 
+  team_id: 
+  contract_start: 2016-03-02
+  contract_end: 2016-03-02
+  shirt_number: 1

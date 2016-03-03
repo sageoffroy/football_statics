@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Player Of Teams</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Team</th>
+      <th>Contract start</th>
+      <th>Contract end</th>
+      <th>Shirt number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @player_of_teams.each do |player_of_team| %>
+      <tr>
+        <td><%= player_of_team.player %></td>
+        <td><%= player_of_team.team %></td>
+        <td><%= player_of_team.contract_start %></td>
+        <td><%= player_of_team.contract_end %></td>
+        <td><%= player_of_team.shirt_number %></td>
+        <td><%= link_to 'Show', player_of_team %></td>
+        <td><%= link_to 'Edit', edit_player_of_team_path(player_of_team) %></td>
+        <td><%= link_to 'Destroy', player_of_team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Player of team', new_player_of_team_path %>

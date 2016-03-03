@@ -69,7 +69,7 @@ person_list = [
   ["Cristian Leonel", "Díaz", "cristian_diaz.png", "1976/05/12", 76	, 176, Nationality.where(name: "Argentina").first],
   ["Alfredo ", "Grelak", "alfredo_grelak.png", "1970/06/20", 78	, 176, Nationality.where(name: "Argentina").first],
   ["Jorge", "Almirón", "jorge_almiron.png", "1971/06/19", 79	, 181, Nationality.where(name: "Argentina").first],
-  ["Frank Darío", "Kudelka", "frank_kudelka.png", "1961/05/12", 86	, 180, Nationality.where(name: "Argentina").first]
+  ["Frank Darío", "Kudelka", "frank_kudelka.png", "1961/05/12", 86	, 180, Nationality.where(name: "Argentina").first],
   # Jugadores River Plate
     #Arqueros
   ["Marcelo", "Barovero", "marcelo_barovero.png", "1984/02/18", 71, 181, Nationality.where(name: "Argentina").first],
@@ -84,9 +84,51 @@ person_list = [
   ["Emanuel", "Mammana", "emanuel_mammana.png", "1996/02/10", 70, 184, Nationality.where(name: "Argentina").first],
   ["Leandro", "Vega", "leandro_vega.png", "1996/05/27", 70, 179, Nationality.where(name: "Argentina").first],
     #Mediocampistas
-
-
-
+  ["Nicolás", "Domingo", "nicolas_domingo.png", "1985/04/08", 70, 174, Nationality.where(name: "Argentina").first],
+  ["Nicolás", "Bertolo", "nicolas_bertolo.png", "1986/01/02", 75, 179, Nationality.where(name: "Argentina").first],
+  ["Gonzalo Nicolás", "Martinez", "gonzalo_martinez.png", "1993/06/13", 75, 172, Nationality.where(name: "Argentina").first],
+  ["Joaquín", "Arzura", "joaquin_arzura.png", "1985/05/18", 71, 170, Nationality.where(name: "Argentina").first],
+  ["Exequiel", "Palacios", "ezequiel_palacios.png", "1998/10/05", 75, 179, Nationality.where(name: "Argentina").first],
+  ["Camilo", "Mayada", "camilo_mayada.png", "1991/01/08", 75, 174, Nationality.where(name: "Uruguaya").first],
+  ["Andrés", "D'Alessandro", "andres_dalessandro.png", "1981/04/15", 72, 174, Nationality.where(name: "Argentina").first],
+  ["Leonardo", "Ponzio", "leonardo_ponzio.png", "1982/01/29", 71, 174, Nationality.where(name: "Argentina").first],
+  ["Ignacio Martín", "Fernández", "ignacio_fernandez.png", "1990/01/19", 77, 182, Nationality.where(name: "Argentina").first],
+  ["Luis", "González", "luis_gonzalez.png", "1981/01/19", 75, 179, Nationality.where(name: "Argentina").first],
+    #Delanteros
+  ["Rodrigo", "Mora", "rodrigo_mora.png", "1987/10/29", 74, 170, Nationality.where(name: "Uruguaya").first],
+  ["Lucas", "Alario", "lucas_alario.png", "1992/10/08", 67, 178, Nationality.where(name: "Argentina").first],
+  ["Leonardo", "Pisculichi", "leonardo_pisculichi.png", "1984/01/18", 65, 175, Nationality.where(name: "Argentina").first],
+  ["Tabaré", "Viudez", "tabare_viudez.png", "1989/09/08", 64, 169, Nationality.where(name: "Uruguaya").first],
+  ["Iván", "Alonso", "ivan_alonso.png", "1979/04/10", 67, 178, Nationality.where(name: "Argentina").first],
+  ["Sebastián", "Driussi", "sebastian_driussi.png", "1996/02/09", 82, 174, Nationality.where(name: "Argentina").first],
+  # Jugadores Independient
+    #Arqueros
+  ["Diego Matías", "Rodríguez", "diego-matias-rodriguez.png", "1989/06/25", 80, 184, Nationality.where(name: "Argentina").first],
+  ["Facundo", "Daffonchio", "facundo-daffonchio.png", "1990/02/02", 77, 187, Nationality.where(name: "Argentina").first],
+  ["Martín", "Campaña", "martin-campana.png", "1989/05/29", 77, 187, Nationality.where(name: "Uruguay").first],
+    #Defensores
+  ["Hernán", "Pellerano", "hernan-pellerano.png", "1984/06/04", 77, 184, Nationality.where(name: "Argentina").first],
+  ["Emanuel", "Aguilera", "emanuel-aguilera.png", "1989/06/11", 76, 188, Nationality.where(name: "Argentina").first],
+  ["Víctor", "Cuesta", "victor-cuesta.png", "1988/11/19", 84, 187, Nationality.where(name: "Argentina").first],
+  ["Rodrigo", "Moreira", "rodrigo-moreira.png", "1996/07/15", 91, 187, Nationality.where(name: "Argentina").first],
+  ["Nicolás", "Tagliafico", "nicolas-tagliafico.png", "1992/08/31", 65, 167, Nationality.where(name: "Argentina").first],
+  ["Gustavo Ariel", "Toledo", "gustavo-ariel-toledo.png", "1989/09/19", 0, 0, Nationality.where(name: "Argentina").first],
+  ["Néstor Adriel", "Breitenbruch", "nestor-adriel-breitenbruch.png", "1995/09/13", 76, 178, Nationality.where(name: "Argentina").first],
+    #Mediocampistas
+  ["Diego Martín", "Rodríguez Berrini", "diego-martin-rodriguez.png", "1989/09/04", 0, 0, Nationality.where(name: "Uruguay").first],
+  ["Jorge", "Ortiz", "jorge-ortiz.png", "1984/06/20", 0, 175, Nationality.where(name: "Argentina").first],
+  ["Jesús", "Méndez", "jesus-mendez.png", "1985/08/01", 0, 183, Nationality.where(name: "Argentina").first],
+  ["Cristian Gabriel", "Rodríguez Barotti", "cristian-gabriel-rodrugez.png", "1985/09/30", 0, 177, Nationality.where(name: "Uruguay").first],
+  ["Juan Manuel", "Martínez Trejo", "juan-manuel-martinez.png", "1992/01/12", 0, 0, Nationality.where(name: "Argentina").first],
+  ["Emiliano Ariel", "Rigoni", "emiliano-rigoni.png", "1993/02/04", 0, 177, Nationality.where(name: "Argentina").first],
+  ["Claudio Ezequiel", "Aquino", "claudio-ezequiel-aquino.png", "1991/07/24", 0, 172, Nationality.where(name: "Argentina").first],
+  ["Rodrigo", "Gómez", "rodrigo-gomez.png", "1993/01/02", 0, 183, Nationality.where(name: "Argentina").first],
+    #Delanteros
+  ["Martín Nahuel", "Benítez", "martin-nahuel-benitez.png", "1994/06/17", 0, 173, Nationality.where(name: "Argentina").first],
+  ["Diego Daniel", "Vera Méndez", "diego-daniel-vera.png", "1985/01/05", 0, 181, Nationality.where(name: "Uruguay").first],
+  ["Leandro Miguel", "Fernández", "leandro-fernandez.png", "1991/03/12", 70, 178, Nationality.where(name: "Argentina").first],
+  ["Lucas", "Albertengo", "lucas-albertengo.png", "1991/01/30", 73, 178, Nationality.where(name: "Argentina").first],
+  ["Germán Gustavo", "Denis", "german-denis.png", "1981/09/10", 0, 183, Nationality.where(name: "Argentina").first]
 ]
 
 person_list.each do |first_name, last_name, picture, birth_date, weight, height, nationality_id|
@@ -140,5 +182,69 @@ team_list.each do |name, initials, foundation, members, stadium, shield|
 end
 
 
+#     POSITIONS
+#
+#        POR
+#  LTI   DFC   LTD
+#  MDI   MDC   MDD
+#  MOI   MOC   MOD
+#  DLI   DLC   DLD
+#
+
+player_list =[
+  #River Plate
+  [Person.where(last_name:"Barovero").first, DominantFoot.where(description:"pie derecho").first, "2004/10/01", ["POR"]],
+  [Person.where(last_name:"Chiarini").first, DominantFoot.where(description:"pie derecho").first, "2003/10/23", ["POR"]],
+  [Person.where(last_name:"Batalla").first, DominantFoot.where(description:"pie derecho").first, "-", ["POR"]],
+  ########
+  [Person.where(last_name:"Maidana").first, DominantFoot.where(description:"pie derecho").first, "2003/11/23", ["DFC"]],
+  [Person.where(last_name:"Álvarez Balanta").first, DominantFoot.where(description:"pie izquierdo").first, "2013/04/07", ["DFC"]],
+  [Person.where(last_name:"Mammana").first, DominantFoot.where(description:"pie derecho").first, "2014/10/09", ["DFC"]],
+  [Person.where(last_name:"Casco").first, DominantFoot.where(description:"pie derecho").first, "2009/06/13", ["LTI"]],
+  [Person.where(last_name:"Vangioni").first, DominantFoot.where(description:"pie izquierdo").first, "2006/11/05", ["LTI"]],
+  [Person.where(last_name:"Mercado").first, DominantFoot.where(description:"pie derecho").first, "2007/02/21", ["LTD","DFC"]],
+  [Person.where(last_name:"Vega").first, DominantFoot.where(description:"pie derecho").first, "2015/03/26", ["LTD"]],
+  ########
+  [Person.where(last_name:"Domingo").first, DominantFoot.where(description:"pie derecho").first, "2005/05/29", ["MDC"]],
+  [Person.where(last_name:"Ponzio").first, DominantFoot.where(description:"pie derecho").first, "2000/07/17", ["MDC"]],
+  [Person.where(last_name:"Arzura").first, DominantFoot.where(description:"pie derecho").first, "2011/11/29", ["MDC"]],
+  [Person.where(last_name:"Martinez").first, DominantFoot.where(description:"pie izquierdo").first, "2011/09/10", ["MOI"]],
+  [Person.where(last_name:"Bertolo").first, DominantFoot.where(description:"pie derecho").first, "2006/09/28", ["MOI"]],
+  [Person.where(last_name:"Viudez").first, DominantFoot.where(description:"pie derecho").first, "2007/03/04", ["MOD"]],
+  [Person.where(last_name:"Mayada").first, DominantFoot.where(description:"pie derecho").first, "2009/10/04", ["MOD", "MOI", "LD"]],
+  [Person.where(last_name:"Pisculichi").first, DominantFoot.where(description:"pie derecho").first, "2002/02/20", ["MOC", "MOI"]],
+  [Person.where(last_name:"Fernández").first, DominantFoot.where(description:"pie izquierdo").first, "2010/10/02", ["MOC", "MOI"]],
+  [Person.where(last_name:"D'Alessandro").first, DominantFoot.where(description:"pie derecho").first, "2000/05/28", ["MOC"]],
+  [Person.where(last_name:"González").first, DominantFoot.where(description:"pie derecho").first, "1999/04/29", ["MOC"]],
+  [Person.where(last_name:"Palacios").first, DominantFoot.where(description:"pie derecho").first, "2015/11/08", ["MOC"]],
+  ########
+  [Person.where(last_name:"Mora").first, DominantFoot.where(description:"pie izquierdo").first, "2007/10/02", ["DLC"]],
+  [Person.where(last_name:"Alario").first, DominantFoot.where(description:"pie izquierdo").first, "2011/06/11", ["DLC"]],
+  [Person.where(last_name:"Alonso").first, DominantFoot.where(description:"pie izquierdo").first, "1998/10/01", ["DLC"]],
+  [Person.where(last_name:"Driussi").first, DominantFoot.where(description:"pie izquierdo").first, "2013/12/01", ["DLC"]]
+]
 
 
+player_list.each do |person, dominant_foot, debut, position|
+  if !(Player.exists?(person: person))
+    Player.create(person:person, dominant_foot:dominant_foot, debut_player:debut, position:position)
+  end
+end
+
+player_of_team_list = [
+  [Player.where(person:Person.where(last_name:"Barovero").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 1],
+  [Player.where(person:Person.where(last_name:"Chiarini").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 33],
+  [Player.where(person:Person.where(last_name:"Batalla").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 42],
+
+  [Player.where(person:Person.where(last_name:"Maidana").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 2],
+  [Player.where(person:Person.where(last_name:"Álvarez Balanta").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 3],
+  [Player.where(person:Person.where(last_name:"Casco").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 20]
+
+]
+
+
+player_of_team_list.each do | player, team, contract_start, contract_end, shirt_number|
+  if !(PlayerOfTeam.exists?(player: player))
+    PlayerOfTeam.create(player:player, team:team, contract_start:contract_start , contract_end:contract_end, shirt_number:shirt_number)
+  end
+end

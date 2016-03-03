@@ -1,71 +1,439 @@
-<!-- Intro Header -->
-<header class="intro">
-    <div class="intro-body">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <h1 class="brand-heading">3-4-3</h1>
-                    <p class="intro-text">Estadìsticas completas en tiempo real.<br>del Fùtbol Argentino.</p>
-                    <a href="#about" class="btn btn-circle page-scroll">
-                        <i class="fa fa-angle-double-down animated"></i>
-                    </a>
+<!-- top tiles -->
+<div class="row tile_count">
+    <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+        <div class="left"></div>
+        <div class="right">
+            <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
+            <div class="count">2500</div>
+            <span class="count_bottom"><i class="green">4% </i> From last Week</span>
+        </div>
+    </div>
+    <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+        <div class="left"></div>
+        <div class="right">
+            <span class="count_top"><i class="fa fa-clock-o"></i> Average Time</span>
+            <div class="count">123.50</div>
+            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
+        </div>
+    </div>
+    <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+        <div class="left"></div>
+        <div class="right">
+            <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
+            <div class="count green">2,500</div>
+            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+        </div>
+    </div>
+    <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+        <div class="left"></div>
+        <div class="right">
+            <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
+            <div class="count">4,567</div>
+            <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
+        </div>
+    </div>
+    <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+        <div class="left"></div>
+        <div class="right">
+            <span class="count_top"><i class="fa fa-user"></i> Total Collections</span>
+            <div class="count">2,315</div>
+            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+        </div>
+    </div>
+    <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+        <div class="left"></div>
+        <div class="right">
+            <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
+            <div class="count">7,325</div>
+            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+        </div>
+    </div>
+
+</div>
+<!-- /top tiles -->
+
+
+<div class="shield-menu">
+    <div class="shields-content">
+        <center>
+        <a href="/" class="shield-link"><%= image_tag "shields/aldosivi.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/argentinos.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/arsenal.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/atletico_rafaela.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/atletico_tucuman.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/banfield.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/belgrano.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/boca_junior.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/colon.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/defensa_y_justicia.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/estudiantes.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/gimnasia.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/godoy_cruz.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/huracan.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/independiente.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/lanus.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/newells.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/olimpo.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/patronato.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/quilmes.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/racing.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/river_plate.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/rosario_central.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/san_lorenzo.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/san_martin.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/sarmiento.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/temperley.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/tigre.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/union.png", class: "shield img-responsive" %></a>
+        <a href="/" class="shield-link"><%= image_tag "shields/velez_sarfield.png", class: "shield img-responsive" %></a>
+        </center>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="dashboard_graph">
+
+            <div class="row x_title">
+                <div class="col-md-6">
+                    <h3>Network Activities <small>Graph title sub-title</small></h3>
+                </div>
+                <div class="col-md-6">
+                    <div id="reportrange" class="pull-right" style="cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                        <span>December 30, 2014 - January 28, 2015</span> <b class="caret"></b>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9 col-sm-9 col-xs-12">
+                <div id="placeholder33" style="height: 260px; display: none" class="demo-placeholder"></div>
+                <div style="width: 100%;">
+                    <div id="canvas_dahs" class="demo-placeholder" style="width: 100%; height:270px;"></div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="x_title">
+                    <h2>Top Campaign Performance</h2>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="col-md-12 col-sm-12 col-xs-6">
+                    <div>
+                        <p>Nicolas Blandi</p>
+                        <div class="">
+                            <div class="progress progress_sm" style="width: 76%;">
+                                <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Bordagaray Fabián</p>
+                        <div class="">
+                            <div class="progress progress_sm" style="width: 76%;">
+                                <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="60"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-6">
+                    <div>
+                        <p>Tevez Carlos</p>
+                        <div class="">
+                            <div class="progress progress_sm" style="width: 76%;">
+                                <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="40"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Pavone Mariano</p>
+                        <div class="">
+                            <div class="progress progress_sm" style="width: 76%;">
+                                <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="50"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</div>
+<br />
+
+<div class="row">
+
+
+    <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="x_panel tile fixed_height_320">
+            <div class="x_title">
+                <h2>% Disparos al arco</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Settings 1</a>
+                            </li>
+                            <li><a href="#">Settings 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <h4>Hasta la fecha 15</h4>
+                <div class="widget_summary">
+                    <div class="w_left w_25">
+                        <span>Aldosivi</span>
+                    </div>
+                    <div class="w_center w_60">
+                        <div class="progress">
+                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
+                                <span class="sr-only">60% Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w_right w_15">
+                        <span>15/25</span>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="widget_summary">
+                    <div class="w_left w_25">
+                        <span>Rosario Central</span>
+                    </div>
+                    <div class="w_center w_55">
+                        <div class="progress">
+                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
+                                <span class="sr-only">60% Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w_right w_20">
+                        <span>12/18</span>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="widget_summary">
+                    <div class="w_left w_25">
+                        <span>Lanus</span>
+                    </div>
+                    <div class="w_center w_55">
+                        <div class="progress">
+                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+                                <span class="sr-only">60% Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w_right w_20">
+                        <span>12/18</span>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="widget_summary">
+                    <div class="w_left w_25">
+                        <span>San Lorenzo</span>
+                    </div>
+                    <div class="w_center w_55">
+                        <div class="progress">
+                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 5%;">
+                                <span class="sr-only">60% Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w_right w_20">
+                        <span>12/18</span>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="widget_summary">
+                    <div class="w_left w_25">
+                        <span>Defensa y Justicia</span>
+                    </div>
+                    <div class="w_center w_55">
+                        <div class="progress">
+                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                <span class="sr-only">60% Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w_right w_20">
+                        <span>12/18</span>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="x_panel tile fixed_height_320 overflow_hidden">
+            <div class="x_title">
+                <h2>% Efectividad en Pases</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Settings 1</a>
+                            </li>
+                            <li><a href="#">Settings 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <table class="tile_info">
+                    <thead>
+                      <tr>
+                        <th><p style="margin-left: 15px">Equipos</p></th>
+                        <th><p style="margin-left: 15px">%</p></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fa fa-square blue"></i>Rosario Central</td>
+                            <td>75,6%</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-square purple"></i>San Lorenzo</td>
+                            <td>75,6%</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-square green"></i>Aldosivi</td>
+                            <td>75,6%</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-square red"></i>Defensa y Justicia</td>
+                            <td>75,6%</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-square dark"></i>Temperley</td>
+                            <td>75,6%</td>
+                        </tr>
+                    </tbody>
+                    <!--<tr>
+                        <td>
+                            <canvas id="canvas1" height="140" width="140" style="margin: 15px 10px 10px 0"></canvas>
+                        </td>
+                        <td>
+                            <table class="tile_info">
+                                <tr>
+                                    <td>
+                                        <p><i class="fa fa-square blue"></i>Rosario Central</p>
+                                    </td>
+                                    <td>75,6%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><i class="fa fa-square green"></i>Lanus</p>
+                                    </td>
+                                    <td>73,5%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><i class="fa fa-square purple"></i>San Lorenzo</p>
+                                    </td>
+                                    <td>71,2%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><i class="fa fa-square aero"></i>Atlético Tucumán</p>
+                                    </td>
+                                    <td>68,0%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><i class="fa fa-square red"></i>Defensa y Justicia</p>
+                                    </td>
+                                    <td>30%</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>-->
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="x_panel tile fixed_height_320">
+            <div class="x_title">
+                <h2>Configuración</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Settings 1</a>
+                            </li>
+                            <li><a href="#">Settings 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="dashboard-widget-content">
+                    <ul class="quick-list">
+                        <li><i class="fa fa-calendar-o"></i><a href="#">Settings</a>
+                        </li>
+                        <li><i class="fa fa-bars"></i><a href="#">Subscription</a>
+                        </li>
+                        <li><i class="fa fa-bar-chart"></i><a href="#">Auto Renewal</a> </li>
+                        <li><i class="fa fa-line-chart"></i><a href="#">Achievements</a>
+                        </li>
+                        <li><i class="fa fa-bar-chart"></i><a href="#">Auto Renewal</a> </li>
+                        <li><i class="fa fa-line-chart"></i><a href="#">Achievements</a>
+                        </li>
+                        <li><i class="fa fa-area-chart"></i><a href="#">Logout</a>
+                        </li>
+                    </ul>
+
+                    <div class="sidebar-widget">
+                        <h4>Profile Completion</h4>
+                        <canvas width="150" height="80" id="foo" class="" style="width: 160px; height: 100px;"></canvas>
+                        <div class="goal-wrapper">
+                            <span class="gauge-value pull-left">$</span>
+                            <span id="gauge-text" class="gauge-value pull-left">3,200</span>
+                            <span id="goal-text" class="goal-value pull-right">$5,000</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</header>
+</div>
 
-<!-- About Section -->
-<section id="about" class="container content-section text-center">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-            <h2>About Grayscale</h2>
-            <p>Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
-            <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-            <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
-        </div>
-    </div>
-</section>
+<!-- footer content 
 
-<!-- Download Section -->
-<section id="download" class="content-section text-center">
-    <div class="download-section">
-        <div class="container">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Download Grayscale</h2>
-                <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="container content-section text-center">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-            <h2>Contact Start Bootstrap</h2>
-            <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
-            <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
-            </p>
-            <ul class="list-inline banner-social-buttons">
-                <li>
-                    <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                </li>
-                <li>
-                    <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                </li>
-                <li>
-                    <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
 <footer>
-    <div class="container text-center">
-        <p>Copyright &copy; Your Website 2014</p>
+    <div class="">
+        <p class="pull-right">Gentelella Alela! a Bootstrap 3 template by <a>Kimlabs</a>. |
+            <span class="lead"> <i class="fa fa-paw"></i> Gentelella Alela!</span>
+        </p>
     </div>
-</footer>
+    <div class="clearfix"></div>
+</footer>-->
+<!-- /footer content -->

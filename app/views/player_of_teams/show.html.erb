@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @player_of_team.player %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @player_of_team.team %>
+</p>
+
+<p>
+  <strong>Contract start:</strong>
+  <%= @player_of_team.contract_start %>
+</p>
+
+<p>
+  <strong>Contract end:</strong>
+  <%= @player_of_team.contract_end %>
+</p>
+
+<p>
+  <strong>Shirt number:</strong>
+  <%= @player_of_team.shirt_number %>
+</p>
+
+<%= link_to 'Edit', edit_player_of_team_path(@player_of_team) %> |
+<%= link_to 'Back', player_of_teams_path %>

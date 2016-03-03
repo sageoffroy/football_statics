@@ -5,15 +5,26 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
     <%= csrf_meta_tags %>
   </head>
-  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <%= render "layouts/navbar" %>
-	  <%= yield %>  
-  </body>
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <%= render "layouts/sidebar_menu" %>
+          </div>
+        </div>
+        <%# render "layouts/top_navegation" %>
+        <div class="right_col" role="main">
+  				<%= yield %>  
+    		</div>
+    	</div>
+	    <%= render "layouts/custom_notification" %>
+	  </div>
+	</body>
 </html>
