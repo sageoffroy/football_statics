@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160302211645) do
+ActiveRecord::Schema.define(version: 20160304004416) do
 
   create_table "coaches", force: :cascade do |t|
     t.integer  "person_id"
@@ -93,6 +93,9 @@ ActiveRecord::Schema.define(version: 20160302211645) do
     t.string   "shield"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "colours1"
+    t.string   "colours2"
+    t.string   "nickname"
   end
 
   add_index "teams", ["stadium_id"], name: "index_teams_on_stadium_id"

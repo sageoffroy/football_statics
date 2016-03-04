@@ -133,6 +133,7 @@ person_list = [
 
 person_list.each do |first_name, last_name, picture, birth_date, weight, height, nationality_id|
     if !(Person.exists?(first_name: first_name, last_name: last_name))
+      debugger
       Person.create(first_name:first_name, last_name:last_name, picture:picture, birth_date:birth_date, weight:weight, height:height, nationality_id:nationality_id)
     end
 end
@@ -173,7 +174,7 @@ end
 
 team_list =[
   ["River Plate", "CARP", "1901/05/25", 123665, Stadium.where(nickname: "El Monumental").first,"river_plate.png" ],
-  ["Independiente", "CAI", "1904/08/04", 107000, Stadium.where(nickname: "Libertadores de América").first,"independient.png" ]
+  ["Independiente", "CAI", "1904/08/04", 107000, Stadium.where(nickname: "Libertadores de América").first,"independiente.png" ]
 ]
 team_list.each do |name, initials, foundation, members, stadium, shield|
   if !(Team.exists?(name: name))

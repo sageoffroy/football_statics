@@ -1,34 +1,54 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <center>
+    <h1 class="<%= @team.colours1 %>"><%= @team.name %></h1>
+    <%= link_to 'Editar', edit_team_path(@team) %> |
+    <%= link_to 'Volver', teams_path %>
+    <p  class="<%= @team.colours2 %>"><%= @team.members %> Socios desde <%= @team.foundation %></p>
+  </center>
+  
 
-<p>
-  <strong>Name:</strong>
-  <%= @team.name %>
-</p>
+  <div class="col-md-8">
+    <div class="table-responsive">          
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre/s</th>
+            <th>Apellido/s</th>
+            <th>Nacionalidad</th>
+            <th>Edad</th>
+            <th>debut</th>
+            <th>Posiciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @players.each do |pot| %>
+          <tr>
+            <td><%=pot.shirt_number%></td>
+            <td><%=pot.player.person.first_name%></td>
+            <td><%=pot.player.person.last_name%></td>
+            <td><center><%= image_tag "flags/"+pot.player.person.nationality.flag, class: "img-responsive table-flag" %></center></td>
+            <td><%=%></td>
+            <td><%=pot.player.debut_player%></td>
+            <td><%=pot.player.position%></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
-<p>
-  <strong>Initials:</strong>
-  <%= @team.initials %>
-</p>
+  <div class="col-md-4">
+      <center>
+        <%= image_tag "shields/"+@team.shield, class: "img-responsive" %>
+        <%= @team.initials %><br>
+        <%= @team.stadium.nickname %>
+      </center>
+  </div>
 
-<p>
-  <strong>Foundation:</strong>
-  <%= @team.foundation %>
-</p>
 
-<p>
-  <strong>Members:</strong>
-  <%= @team.members %>
-</p>
-
-<p>
-  <strong>Stadium:</strong>
-  <%= @team.stadium %>
-</p>
-
-<p>
-  <strong>Shield:</strong>
-  <%= @team.shield %>
-</p>
-
-<%= link_to 'Edit', edit_team_path(@team) %> |
-<%= link_to 'Back', teams_path %>
+  <p id="notice"><%= notice %></p>
+    
+  
+  
+</div>

@@ -665,6 +665,10 @@ body.nav-md .container.body .right_col {
 }
 /**  ------------------------------------------  **/
 
+.white{
+    color: #ffffff;
+}
+
 .blue {
     color: #3498DB;
 }
@@ -682,7 +686,7 @@ body.nav-md .container.body .right_col {
 }
 
 .red {
-    color: #E74C3C;
+    color: #FF4C4C;
 }
 
 .dark {
@@ -1721,6 +1725,10 @@ thead {
 
 td span {
     line-height: 28px;
+}
+
+.table-flag{
+    max-height: 20px;
 }
 
 .sidebar-widget {
