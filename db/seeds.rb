@@ -328,4 +328,37 @@ player_of_team_list.each do | player, team, contract_start, contract_end, shirt_
 end
 
 
+stat_list = [
+  "Pases",
+  "Pases errados",
+  "Remates",
+  "Recupero",
+  "Atajadas",
+  "Remates al arco",
+  "Remates afuera",
+  "Pérdidas",
+  "Goles en contra",
+  "Amarilla",
+  "Roja",
+  "Corners",
+  "Laterales",
+  "Faltas cometidas",
+  "Faltas recibidas",
+  "Manos",
+  "Penal cometido",
+  "Penal recibido",
+  "Gol de Cabeza",
+  "Gol pierna izquierda",
+  "Gol pierna derecha",
+  "Gol tiro libre izquierda",
+  "Gol tiro libre derecha",
+  "Gol penal izquierda",
+  "Gol penal derecha"
+]
+
+stat_list.each do |description|
+  Stat.find_or_create_by(description: description)
+end
+
+
 
