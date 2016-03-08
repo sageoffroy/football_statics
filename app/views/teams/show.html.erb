@@ -1,17 +1,3 @@
-<script>
-function getAge(dateString) {
-  console.log(dateString);
-  var today = new Date();
-  var birthDate = new Date(dateString);
-  var age = today.getFullYear() - birthDate.getFullYear();
-  var m = today.getMonth() - birthDate.getMonth();
-  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-    age--;
-  }
-  $('#age').text(age);
-}
-
-</script>
 
 
 <div class="row">
@@ -43,9 +29,8 @@ function getAge(dateString) {
             <td><center><%= image_tag "players/"+pot.player.person.picture, class: "img-responsive table-player" %></center></td>
             <td><%=pot.player.person.first_name%></td>
             <td><%=pot.player.person.last_name%></td>
-            <td><center><%= image_tag "flags/"+pot.player.person.nationality.flag, class: "img-responsive table-flag" %></center></td>
-            <script type="text/javascript"> getAge(<%=pot.player.person.birth_date%>)</script>
-            <td id="age"></td>
+            <td><center><%= image_tag "flags/"+pot.player.person.nationality.flag, class: "img-responsive table-flag" %></center></td>          
+            <td id="age"><%=pot.player.person.get_age(pot.player.person.birth_date)%></td>
             <% if pot.player.debut_player =="" || pot.player.debut_player == nil %>
             <td>No debuto</td>
             <% else %>  
