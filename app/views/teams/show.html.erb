@@ -1,34 +1,107 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @team.name %>
-</p>
 
-<p>
-  <strong>Initials:</strong>
-  <%= @team.initials %>
-</p>
+<div class="row">
+  <center style="margin-bottom: 45px;">
+    <h1 class="<%= @team.colours1 %>"><%= @team.name %></h1>
+    <%= link_to 'Editar', edit_team_path(@team) %> |
+    <%= link_to 'Volver', teams_path %>
+  </center>
+  
+  <div class="col-xs-9">
+    <div class="x_panel table-responsive overflow_auto fixed_height_655">          
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th></th>
+            <th>Nombre/s</th>
+            <th>Apellido/s</th>
+            <th>Nacionalidad</th>
+            <th>Edad</th>
+            <th>debut</th>
+            <th>Posiciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @players.each do |pot| %>
+            <tr>
+            <td><%=pot.shirt_number%></td>
+            <td><center><%= image_tag "players/"+pot.player.person.picture, class: "img-responsive table-player" %></center></td>
+            <td><%=pot.player.person.first_name%></td>
+            <td><%=pot.player.person.last_name%></td>
+            <td><center><%= image_tag "flags/"+pot.player.person.nationality.flag, class: "img-responsive table-flag" %></center></td>          
+            <td id="age"><%=pot.player.person.get_age(pot.player.person.birth_date)%></td>
+            <% if pot.player.debut_player =="" || pot.player.debut_player == nil %>
+            <td>No debuto</td>
+            <% else %>  
+            <td><%=pot.player.debut_player%></td>
+            <% end %>
+            <td><%=pot.player.position%></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
-<p>
-  <strong>Foundation:</strong>
-  <%= @team.foundation %>
-</p>
+  <div class="col-xs-3">
+      <center>
+        <div class="x_panel tile fixed_height_320 shield_panel">
+          <div class="x_title">
+            <h2><%= @team.initials %></h2>
+            <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Settings 1</a>
+                        </li>
+                        <li><a href="#">Settings 2</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+          <%= image_tag "shields/"+@team.shield, class: "img-responsive" %>
+          <p>
+            Fundado en: <%= @team.foundation %><br>
+            Presidente: <br>
+            Director Técnico: <br>
+          </p>        
+        </div>
+        <div class="x_panel tile fixed_height_320 stadium_panel">
+          <div class="x_title">
+            <h2><%= @team.stadium.nickname %></h2>
+            <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Settings 1</a>
+                        </li>
+                        <li><a href="#">Settings 2</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+          <%= image_tag "stadia/"+@team.stadium.picture, class: "img-responsive stadium" %>
+          <p>Fundado en: <%= @team.stadium.foundation %><br>
+          Capacidad: <%= @team.stadium.capacity %></p>        
+        </div>
+      </center>
+  </div>
 
-<p>
-  <strong>Members:</strong>
-  <%= @team.members %>
-</p>
+  <p id="notice"><%= notice %></p>
+</div>
 
-<p>
-  <strong>Stadium:</strong>
-  <%= @team.stadium %>
-</p>
 
-<p>
-  <strong>Shield:</strong>
-  <%= @team.shield %>
-</p>
 
-<%= link_to 'Edit', edit_team_path(@team) %> |
-<%= link_to 'Back', teams_path %>

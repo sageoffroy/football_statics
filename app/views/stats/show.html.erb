@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @stat.description %>
+</p>
+
+<p>
+  <strong>Binding key:</strong>
+  <%= @stat.binding_key %>
+</p>
+
+<%= link_to 'Edit', edit_stat_path(@stat) %> |
+<%= link_to 'Back', stats_path %>

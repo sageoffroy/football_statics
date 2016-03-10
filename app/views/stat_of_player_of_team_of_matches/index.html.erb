@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Stat Of Player Of Team Of Matches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Player of team of match</th>
+      <th>Stat</th>
+      <th>Value</th>
+      <th>Time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stat_of_player_of_team_of_matches.each do |stat_of_player_of_team_of_match| %>
+      <tr>
+        <td><%= stat_of_player_of_team_of_match.player_of_team_of_match_id %></td>
+        <td><%= stat_of_player_of_team_of_match.stat_id %></td>
+        <td><%= stat_of_player_of_team_of_match.value %></td>
+        <td><%= stat_of_player_of_team_of_match.time %></td>
+        <td><%= link_to 'Show', stat_of_player_of_team_of_match %></td>
+        <td><%= link_to 'Edit', edit_stat_of_player_of_team_of_match_path(stat_of_player_of_team_of_match) %></td>
+        <td><%= link_to 'Destroy', stat_of_player_of_team_of_match, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stat of player of team of match', new_stat_of_player_of_team_of_match_path %>

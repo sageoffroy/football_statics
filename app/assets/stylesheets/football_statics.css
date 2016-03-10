@@ -389,7 +389,7 @@ input, select {
 
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
   vertical-align: middle;
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
 }
 
@@ -665,6 +665,10 @@ body.nav-md .container.body .right_col {
 }
 /**  ------------------------------------------  **/
 
+.white{
+    color: #ffffff;
+}
+
 .blue {
     color: #3498DB;
 }
@@ -682,7 +686,7 @@ body.nav-md .container.body .right_col {
 }
 
 .red {
-    color: #E74C3C;
+    color: #FF4C4C;
 }
 
 .dark {
@@ -834,6 +838,10 @@ body {
     margin: 10px 0;
 }
 
+.fixed_height_200 {
+    height: 200px;
+}
+
 .fixed_height_320 {
     height: 320px;
 }
@@ -842,12 +850,16 @@ body {
     height: 390px;
 }
 
-.fixed_height_200 {
-    height: 200px;
+.fixed_height_655 {
+    height: 655px;
 }
 
 .overflow_hidden {
-    overflow: hidden
+    overflow: hidden;
+}
+
+.overflow_auto {
+    overflow: auto;
 }
 
 .progress-bar-dark {
@@ -1721,6 +1733,14 @@ thead {
 
 td span {
     line-height: 28px;
+}
+
+.table-flag{
+    max-height: 25px;
+}
+
+.table-player{
+    max-height: 35px;
 }
 
 .sidebar-widget {
@@ -6837,4 +6857,22 @@ ul.notifications {
 
 .shield-link{
 
+}
+
+
+.stadium {
+    max-height: 150px;
+}
+
+
+.shield_panel p, .stadium_panel p
+{
+    text-align: left;
+    font-size: 16px;
+    
+}
+
+.shield_panel img, .stadium_panel img
+{
+    padding: 15px;
 }

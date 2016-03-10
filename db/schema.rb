@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160302211645) do
+ActiveRecord::Schema.define(version: 20160308165204) do
 
   create_table "coaches", force: :cascade do |t|
     t.integer  "person_id"
@@ -49,6 +49,16 @@ ActiveRecord::Schema.define(version: 20160302211645) do
 
   add_index "people", ["nationality_id"], name: "index_people_on_nationality_id"
 
+  create_table "player_of_team_matches", force: :cascade do |t|
+    t.integer  "player_of_team_id"
+    t.integer  "match_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  add_index "player_of_team_matches", ["match_id"], name: "index_player_of_team_matches_on_match_id"
+  add_index "player_of_team_matches", ["player_of_team_id"], name: "index_player_of_team_matches_on_player_of_team_id"
+
   create_table "player_of_teams", force: :cascade do |t|
     t.integer  "player_id"
     t.integer  "team_id"
@@ -84,6 +94,22 @@ ActiveRecord::Schema.define(version: 20160302211645) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "stat_of_player_of_team_of_matches", force: :cascade do |t|
+    t.integer  "player_of_team_of_match_id"
+    t.integer  "stat_id"
+    t.integer  "value"
+    t.time     "time"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  create_table "stats", force: :cascade do |t|
+    t.string   "description"
+    t.string   "binding_key"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "teams", force: :cascade do |t|
     t.string   "name"
     t.string   "initials"
@@ -93,6 +119,9 @@ ActiveRecord::Schema.define(version: 20160302211645) do
     t.string   "shield"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "colours1"
+    t.string   "colours2"
+    t.string   "nickname"
   end
 
   add_index "teams", ["stadium_id"], name: "index_teams_on_stadium_id"

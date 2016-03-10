@@ -76,7 +76,7 @@ person_list = [
   ["Julio", "Chiarini", "julio_chiarini.png", "1982/03/04", 79, 181, Nationality.where(name: "Argentina").first],
   ["Augusto", "Batalla", "augusto_batalla.png", "1996/04/30",  79, 185, Nationality.where(name: "Argentina").first],
     #Defensores
-  ["Jonathan", "Maidana", "jonatha_maidana.png", "1985/07/29", 86, 185, Nationality.where(name: "Argentina").first],
+  ["Jonathan", "Maidana", "jonathan_maidana.png", "1985/07/29", 86, 185, Nationality.where(name: "Argentina").first],
   ["Éder", "Álvarez Balanta", "eder_alvarez_balanta.png", "1993/02/28", 85, 182, Nationality.where(name: "Colombiana").first],
   ["Milton", "Casco", "milton_casco.png", "1988/04/11", 71, 171, Nationality.where(name: "Argentina").first],
   ["Leonel", "Vangioni", "leonel_vangioni.png", "1987/05/05", 73, 177, Nationality.where(name: "Argentina").first],
@@ -101,11 +101,11 @@ person_list = [
   ["Tabaré", "Viudez", "tabare_viudez.png", "1989/09/08", 64, 169, Nationality.where(name: "Uruguaya").first],
   ["Iván", "Alonso", "ivan_alonso.png", "1979/04/10", 67, 178, Nationality.where(name: "Argentina").first],
   ["Sebastián", "Driussi", "sebastian_driussi.png", "1996/02/09", 82, 174, Nationality.where(name: "Argentina").first],
-  # Jugadores Independient
+  # Jugadores Independiente
     #Arqueros
   ["Diego Matías", "Rodríguez", "diego-matias-rodriguez.png", "1989/06/25", 80, 184, Nationality.where(name: "Argentina").first],
   ["Facundo", "Daffonchio", "facundo-daffonchio.png", "1990/02/02", 77, 187, Nationality.where(name: "Argentina").first],
-  ["Martín", "Campaña", "martin-campana.png", "1989/05/29", 77, 187, Nationality.where(name: "Uruguay").first],
+  ["Martín", "Campaña", "martin-campana.png", "1989/05/29", 78, 187, Nationality.where(name: "Uruguaya").first],
     #Defensores
   ["Hernán", "Pellerano", "hernan-pellerano.png", "1984/06/04", 77, 184, Nationality.where(name: "Argentina").first],
   ["Emanuel", "Aguilera", "emanuel-aguilera.png", "1989/06/11", 76, 188, Nationality.where(name: "Argentina").first],
@@ -115,25 +115,25 @@ person_list = [
   ["Gustavo Ariel", "Toledo", "gustavo-ariel-toledo.png", "1989/09/19", 0, 0, Nationality.where(name: "Argentina").first],
   ["Néstor Adriel", "Breitenbruch", "nestor-adriel-breitenbruch.png", "1995/09/13", 76, 178, Nationality.where(name: "Argentina").first],
     #Mediocampistas
-  ["Diego Martín", "Rodríguez Berrini", "diego-martin-rodriguez.png", "1989/09/04", 0, 0, Nationality.where(name: "Uruguay").first],
+  ["Diego Martín", "Rodríguez Berrini", "diego-martin-rodriguez.png", "1989/09/04", 0, 0, Nationality.where(name: "Uruguaya").first],
   ["Jorge", "Ortiz", "jorge-ortiz.png", "1984/06/20", 0, 175, Nationality.where(name: "Argentina").first],
   ["Jesús", "Méndez", "jesus-mendez.png", "1985/08/01", 0, 183, Nationality.where(name: "Argentina").first],
-  ["Cristian Gabriel", "Rodríguez Barotti", "cristian-gabriel-rodrugez.png", "1985/09/30", 0, 177, Nationality.where(name: "Uruguay").first],
+  ["Cristian Gabriel", "Rodríguez Barotti", "cristian-gabriel-rodrugez.png", "1985/09/30", 0, 177, Nationality.where(name: "Uruguaya").first],
   ["Juan Manuel", "Martínez Trejo", "juan-manuel-martinez.png", "1992/01/12", 0, 0, Nationality.where(name: "Argentina").first],
   ["Emiliano Ariel", "Rigoni", "emiliano-rigoni.png", "1993/02/04", 0, 177, Nationality.where(name: "Argentina").first],
   ["Claudio Ezequiel", "Aquino", "claudio-ezequiel-aquino.png", "1991/07/24", 0, 172, Nationality.where(name: "Argentina").first],
   ["Rodrigo", "Gómez", "rodrigo-gomez.png", "1993/01/02", 0, 183, Nationality.where(name: "Argentina").first],
     #Delanteros
   ["Martín Nahuel", "Benítez", "martin-nahuel-benitez.png", "1994/06/17", 0, 173, Nationality.where(name: "Argentina").first],
-  ["Diego Daniel", "Vera Méndez", "diego-daniel-vera.png", "1985/01/05", 0, 181, Nationality.where(name: "Uruguay").first],
+  ["Diego Daniel", "Vera Méndez", "diego-daniel-vera.png", "1985/01/05", 0, 181, Nationality.where(name: "Uruguaya").first],
   ["Leandro Miguel", "Fernández", "leandro-fernandez.png", "1991/03/12", 70, 178, Nationality.where(name: "Argentina").first],
   ["Lucas", "Albertengo", "lucas-albertengo.png", "1991/01/30", 73, 178, Nationality.where(name: "Argentina").first],
   ["Germán Gustavo", "Denis", "german-denis.png", "1981/09/10", 0, 183, Nationality.where(name: "Argentina").first]
 ]
 
-person_list.each do |first_name, last_name, picture, birth_date, weight, height, nationality_id|
+person_list.each do |first_name, last_name, picture, birth_date, weight, height, nationality|
     if !(Person.exists?(first_name: first_name, last_name: last_name))
-      Person.create(first_name:first_name, last_name:last_name, picture:picture, birth_date:birth_date, weight:weight, height:height, nationality_id:nationality_id)
+      Person.create(first_name:first_name, last_name:last_name, picture:picture, birth_date:birth_date, weight:weight, height:height, nationality_id:nationality.id)
     end
 end
 
@@ -159,8 +159,8 @@ end
 
 
 stadium_list = [
-  ["Estadio Monumental Antonio Vespucio Liberti", "El Monumental", "1935/05/25", 65645, "el_monumental.png"],
-  ["Libertadores de América", "Libertadores de América", "1928/03/04", 48069, "libertadores_de_america.png"]
+  ["Estadio Monumental Antonio Vespucio Liberti", "El Monumental", "1935/05/25", 65645, "el_monumental.jpg"],
+  ["Libertadores de América", "Libertadores de América", "1928/03/04", 48069, "libertadores_de_america.jpg"]
 
 ]
 
@@ -172,8 +172,8 @@ end
 
 
 team_list =[
-  ["River Plate", "CARP", "1901/05/25", 123665, Stadium.where(nickname: "El Monumental").first,"river_plate.png" ],
-  ["Independiente", "CAI", "1904/08/04", 107000, Stadium.where(nickname: "Libertadores de América").first,"independient.png" ]
+  ["River Plate", "C.A.R.P", "1901/05/25", 123665, Stadium.where(nickname: "El Monumental").first,"river_plate.png" ],
+  ["Independiente", "C.A.I", "1904/08/04", 107000, Stadium.where(nickname: "Libertadores de América").first,"independiente.png" ]
 ]
 team_list.each do |name, initials, foundation, members, stadium, shield|
   if !(Team.exists?(name: name))
@@ -210,10 +210,10 @@ player_list =[
   [Person.where(last_name:"Arzura").first, DominantFoot.where(description:"pie derecho").first, "2011/11/29", ["MDC"]],
   [Person.where(last_name:"Martinez").first, DominantFoot.where(description:"pie izquierdo").first, "2011/09/10", ["MOI"]],
   [Person.where(last_name:"Bertolo").first, DominantFoot.where(description:"pie derecho").first, "2006/09/28", ["MOI"]],
-  [Person.where(last_name:"Viudez").first, DominantFoot.where(description:"pie derecho").first, "2007/03/04", ["MOD"]],
+  [Person.where(last_name:"Viudez").first, DominantFoot.where(description:"pie derecho").first, "2007/03/04", ["MOD", "DLD"]],
   [Person.where(last_name:"Mayada").first, DominantFoot.where(description:"pie derecho").first, "2009/10/04", ["MOD", "MOI", "LD"]],
   [Person.where(last_name:"Pisculichi").first, DominantFoot.where(description:"pie derecho").first, "2002/02/20", ["MOC", "MOI"]],
-  [Person.where(last_name:"Fernández").first, DominantFoot.where(description:"pie izquierdo").first, "2010/10/02", ["MOC", "MOI"]],
+  [Person.where(first_name:"Ignacio Martín" , last_name:"Fernández").first, DominantFoot.where(description:"pie izquierdo").first, "2010/10/02", ["MOC", "MOI"]],
   [Person.where(last_name:"D'Alessandro").first, DominantFoot.where(description:"pie derecho").first, "2000/05/28", ["MOC"]],
   [Person.where(last_name:"González").first, DominantFoot.where(description:"pie derecho").first, "1999/04/29", ["MOC"]],
   [Person.where(last_name:"Palacios").first, DominantFoot.where(description:"pie derecho").first, "2015/11/08", ["MOC"]],
@@ -221,7 +221,35 @@ player_list =[
   [Person.where(last_name:"Mora").first, DominantFoot.where(description:"pie izquierdo").first, "2007/10/02", ["DLC"]],
   [Person.where(last_name:"Alario").first, DominantFoot.where(description:"pie izquierdo").first, "2011/06/11", ["DLC"]],
   [Person.where(last_name:"Alonso").first, DominantFoot.where(description:"pie izquierdo").first, "1998/10/01", ["DLC"]],
-  [Person.where(last_name:"Driussi").first, DominantFoot.where(description:"pie izquierdo").first, "2013/12/01", ["DLC"]]
+  [Person.where(last_name:"Driussi").first, DominantFoot.where(description:"pie izquierdo").first, "2013/12/01", ["DLC"]],
+  
+  #Independiente
+  [Person.where(last_name:"Rodríguez").first, DominantFoot.where(description:"pie derecho").first, "16/06/2011", ["POR"]], 
+  [Person.where(last_name:"Daffonchio").first, DominantFoot.where(description:"pie derecho").first, "-", ["POR"]], 
+  [Person.where(last_name:"Campaña").first, DominantFoot.where(description:"pie derecho").first, "-", ["POR"]], 
+  ########
+  [Person.where(last_name:"Pellerano").first, DominantFoot.where(description:"pie derecho").first, "2003/10/01", ["DFC"]], 
+  [Person.where(last_name:"Aguilera").first, DominantFoot.where(description:"pie derecho").first, "25/02/2011", ["DFC"]], 
+  [Person.where(last_name:"Cuesta").first, DominantFoot.where(description:"pie izquierdo").first, "28/10/2011", ["DFC"]], 
+  [Person.where(last_name:"Moreira").first, DominantFoot.where(description:"pie derecho").first, "", ["DFC"]], 
+  [Person.where(last_name:"Tagliafico").first, DominantFoot.where(description:"pie izquierdo").first, "11/03/2011", ["DFC"]], 
+  [Person.where(last_name:"Toledo").first, DominantFoot.where(description:"pie izquierdo").first, "01/10/2009", ["LTD"]], 
+  [Person.where(last_name:"Breitenbruch").first, DominantFoot.where(description:"pie derecho").first, "01/10/2009", ["LTD", "DFC"]], 
+  ########
+  [Person.where(last_name:"Rodríguez Berrini").first, DominantFoot.where(description:"pie derecho").first, "01/10/2009", ["LTD", "DFC"]], 
+  [Person.where(last_name:"Ortiz").first, DominantFoot.where(description:"pie derecho").first, "28/11/2012", ["MDC", "MOC"]],
+  [Person.where(last_name:"Mendez").first, DominantFoot.where(description:"pie derecho").first, "03/03/2004", ["MDC", "MOC"]],
+  [Person.where(last_name:"Rodríguez Barotti").first, DominantFoot.where(description:"pie izquierdo").first, "01/10/2002", ["MOI"]],
+  [Person.where(last_name:"Martínez Trejo").first, DominantFoot.where(description:"pie izquierdo").first, "22/09/2012", ["MOI"]],
+  [Person.where(last_name:"Rigoni").first, DominantFoot.where(description:"pie izquierdo").first, "04/08/2010", ["MOD"]],
+  [Person.where(last_name:"Aquino").first, DominantFoot.where(description:"pie derecho").first, "04/08/2010", ["MOD"]],
+  [Person.where(last_name:"Gómez").first, DominantFoot.where(description:"pie derecho").first, "04/05/2013", ["MOD"]],
+  ########
+  [Person.where(last_name:"Benítez").first, DominantFoot.where(description:"pie derecho").first, "19/11/2011", ["MOI", "DLI"]],
+  [Person.where(last_name:"Vera Méndez").first, DominantFoot.where(description:"pie derecho").first, "01/10/2004", ["DLC"]],
+  [Person.where(first_name:"Leandro Miguel" , last_name:"Fernández").first, DominantFoot.where(description:"pie derecho").first, " 23/05/2009", ["DLC", "DLD"]],
+  [Person.where(last_name:"Albertengo").first, DominantFoot.where(description:"pie derecho").first, "15/03/2012", ["DLC"]],
+  [Person.where(last_name:"Denis").first, DominantFoot.where(description:"pie derecho").first, "04/10/1997", ["DLC"]]
 ]
 
 
@@ -231,15 +259,65 @@ player_list.each do |person, dominant_foot, debut, position|
   end
 end
 
+
 player_of_team_list = [
+  #River Plate
   [Player.where(person:Person.where(last_name:"Barovero").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 1],
   [Player.where(person:Person.where(last_name:"Chiarini").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 33],
   [Player.where(person:Person.where(last_name:"Batalla").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 42],
-
+  ########
   [Player.where(person:Person.where(last_name:"Maidana").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 2],
   [Player.where(person:Person.where(last_name:"Álvarez Balanta").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 3],
-  [Player.where(person:Person.where(last_name:"Casco").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 20]
-
+  [Player.where(person:Person.where(last_name:"Casco").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 20],
+  [Player.where(person:Person.where(last_name:"Vangioni").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 3],
+  [Player.where(person:Person.where(last_name:"Mammana").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 24],
+  [Player.where(person:Person.where(last_name:"Mercado").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 25],
+  [Player.where(person:Person.where(last_name:"Vega").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 28],
+  ########
+  [Player.where(person:Person.where(last_name:"Domingo").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 5],
+  [Player.where(person:Person.where(last_name:"Ponzio").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 23],
+  [Player.where(person:Person.where(last_name:"Arzura").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 14],
+  [Player.where(person:Person.where(last_name:"Martinez").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 10],
+  [Player.where(person:Person.where(last_name:"Bertolo").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 8],
+  [Player.where(person:Person.where(last_name:"Viudez").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 17],
+  [Player.where(person:Person.where(last_name:"Mayada").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 18],
+  [Player.where(person:Person.where(last_name:"Pisculichi").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 15],
+  [Player.where(person:Person.where(last_name:"Fernández").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 26],
+  [Player.where(person:Person.where(last_name:"D'Alessandro").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 22],
+  [Player.where(person:Person.where(last_name:"González").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 27],
+  [Player.where(person:Person.where(last_name:"Palacios").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 16],
+  #########
+  [Player.where(person:Person.where(last_name:"Mora").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 7],
+  [Player.where(person:Person.where(last_name:"Alario").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 13],
+  [Player.where(person:Person.where(last_name:"Alonso").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 19],
+  [Player.where(person:Person.where(last_name:"Driussi").first).first, Team.where(name:"River Plate").first, "1/1/2015", "1/1/2017", 32],
+  #Independiente
+  [Player.where(person:Person.where(last_name:"Rodríguez").first).first, Team.where(name:"Independiente").first, "1/1/2015", "1/1/2017", 1],
+  [Player.where(person:Person.where(last_name:"Daffonchio").first).first, Team.where(name:"Independiente").first, "1/1/2015", "1/1/2017", 12],
+  [Player.where(person:Person.where(last_name:"Campaña").first).first, Team.where(name:"Independiente").first, "1/1/2015", "1/1/2017", 25],
+  ########
+  [Player.where(person:Person.where(last_name:"Pellerano").first).first, Team.where(name:"Independiente").first, "1/1/2015", "1/1/2017", 2],
+  [Player.where(person:Person.where(last_name:"Aguilera").first).first, Team.where(name:"Independiente").first, "1/1/2015", "1/1/2017", 6],
+  [Player.where(person:Person.where(last_name:"Cuesta").first).first, Team.where(name:"Independiente").first, "1/1/2015", "1/1/2017", 14],
+  [Player.where(person:Person.where(last_name:"Moreira").first).first, Team.where(name:"Independiente").first, "1/1/2015", "1/1/2017", 30],
+  [Player.where(person:Person.where(last_name:"Tagliafico").first).first, Team.where(name:"Independiente").first, "1/1/2015", "1/1/2017", 3],
+  [Player.where(person:Person.where(last_name:"Toledo").first).first, Team.where(name:"Independiente").first, "1/1/2015", "1/1/2017", 26],
+  [Player.where(person:Person.where(last_name:"Breitenbruch").first).first, Team.where(name:"Independiente").first, "1/1/2015", "1/1/2017", 32],
+  ########
+  [Player.where(person:Person.where(last_name:"Rodríguez Berrini").first).first, Team.where(name:"Independiente").first, "1/1/2015", "1/1/2017", 15],
+  [Player.where(person:Person.where(last_name:"Ortiz").first).first, Team.where(name:"Independiente").first, "1/1/2015", "1/1/2017", 4],
+  [Player.where(person:Person.where(last_name:"Mendez").first).first, Team.where(name:"Independiente").first, "1/1/2015", "1/1/2017", 8],
+  [Player.where(person:Person.where(last_name:"Rodríguez Barotti").first).first, Team.where(name:"Independiente").first, "1/1/2015", "1/1/2017", 10],
+  [Player.where(person:Person.where(last_name:"Martínez Trejo").first).first, Team.where(name:"Independiente").first, "1/1/2015", "1/1/2017", 17],
+  [Player.where(person:Person.where(last_name:"Rigoni").first).first, Team.where(name:"Independiente").first, "1/1/2015", "1/1/2017", 24],
+  [Player.where(person:Person.where(last_name:"Aquino").first).first, Team.where(name:"Independiente").first, "1/1/2015", "1/1/2017", 22],
+  [Player.where(person:Person.where(last_name:"Gómez").first).first, Team.where(name:"Independiente").first, "1/1/2015", "1/1/2017", 27],
+  ########
+  [Player.where(person:Person.where(last_name:"Benítez").first).first, Team.where(name:"Independiente").first, "1/1/2015", "1/1/2017", 7],
+  [Player.where(person:Person.where(last_name:"Vera Méndez").first).first, Team.where(name:"Independiente").first, "1/1/2015", "1/1/2017", 9],
+  [Player.where(person:Person.where(first_name:"Leandro Miguel" , last_name:"Fernández").first).first, Team.where(name:"Independiente").first, "1/1/2015", "1/1/2017", 11],
+  [Player.where(person:Person.where(last_name:"Albertengo").first).first, Team.where(name:"Independiente").first, "1/1/2015", "1/1/2017", 18],
+  [Player.where(person:Person.where(last_name:"Denis").first).first, Team.where(name:"Independiente").first, "1/1/2015", "1/1/2017", 19]
 ]
 
 
@@ -248,3 +326,39 @@ player_of_team_list.each do | player, team, contract_start, contract_end, shirt_
     PlayerOfTeam.create(player:player, team:team, contract_start:contract_start , contract_end:contract_end, shirt_number:shirt_number)
   end
 end
+
+
+stat_list = [
+  "Pases",
+  "Pases errados",
+  "Remates",
+  "Recupero",
+  "Atajadas",
+  "Remates al arco",
+  "Remates afuera",
+  "Pérdidas",
+  "Goles en contra",
+  "Amarilla",
+  "Roja",
+  "Corners",
+  "Laterales",
+  "Faltas cometidas",
+  "Faltas recibidas",
+  "Manos",
+  "Penal cometido",
+  "Penal recibido",
+  "Gol de Cabeza",
+  "Gol pierna izquierda",
+  "Gol pierna derecha",
+  "Gol tiro libre izquierda",
+  "Gol tiro libre derecha",
+  "Gol penal izquierda",
+  "Gol penal derecha"
+]
+
+stat_list.each do |description|
+  Stat.find_or_create_by(description: description)
+end
+
+
+
