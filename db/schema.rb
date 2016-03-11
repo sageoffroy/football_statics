@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160309184151) do
+ActiveRecord::Schema.define(version: 20160310210350) do
 
   create_table "coaches", force: :cascade do |t|
     t.integer  "person_id"
@@ -21,6 +21,21 @@ ActiveRecord::Schema.define(version: 20160309184151) do
   end
 
   add_index "coaches", ["person_id"], name: "index_coaches_on_person_id"
+
+  create_table "competition_types", force: :cascade do |t|
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "competitions", force: :cascade do |t|
+    t.integer  "competition_type_id"
+    t.string   "name"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  add_index "competitions", ["competition_type_id"], name: "index_competitions_on_competition_type_id"
 
   create_table "dominant_foots", force: :cascade do |t|
     t.string   "description"
@@ -38,8 +53,6 @@ ActiveRecord::Schema.define(version: 20160309184151) do
   end
 
   add_index "matches", ["season_of_competition_id"], name: "index_matches_on_season_of_competition_id"
-  add_index "matches", ["team_1_id"], name: "index_matches_on_team_1_id"
-  add_index "matches", ["team_2_id"], name: "index_matches_on_team_2_id"
 
   create_table "nationalities", force: :cascade do |t|
     t.string   "name"
@@ -96,6 +109,23 @@ ActiveRecord::Schema.define(version: 20160309184151) do
 
   add_index "players", ["dominant_foot_id"], name: "index_players_on_dominant_foot_id"
   add_index "players", ["person_id"], name: "index_players_on_person_id"
+
+  create_table "season_of_competitions", force: :cascade do |t|
+    t.integer  "season_id"
+    t.integer  "competition_id"
+    t.string   "name"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "season_of_competitions", ["competition_id"], name: "index_season_of_competitions_on_competition_id"
+  add_index "season_of_competitions", ["season_id"], name: "index_season_of_competitions_on_season_id"
+
+  create_table "seasons", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "stadia", force: :cascade do |t|
     t.string   "name"
