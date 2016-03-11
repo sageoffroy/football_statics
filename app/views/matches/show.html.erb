@@ -7,20 +7,12 @@
 
 <p>
   <strong>Team 1:</strong>
-<<<<<<< HEAD
-  <%= @match.team_1_id %>
-=======
-  <%=Team.where(id:@match.team_1_id).first().name %>
->>>>>>> 0b555df0926b2c83562722522c976766d3a0aca6
+  <%= @match.team_1 %>
 </p>
 
 <p>
   <strong>Team 2:</strong>
-<<<<<<< HEAD
-  <%= @match.team_2_id %>
-=======
-  <%=Team.where(id:@match.team_2_id).first().name %>
->>>>>>> 0b555df0926b2c83562722522c976766d3a0aca6
+  <%= @match.team_2 %>
 </p>
 
 <p>
@@ -30,7 +22,3 @@
 
 <%= link_to 'Edit', edit_match_path(@match) %> |
 <%= link_to 'Back', matches_path %>
-<<<<<<< HEAD
-=======
-
->>>>>>> 0b555df0926b2c83562722522c976766d3a0aca6

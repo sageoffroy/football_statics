@@ -16,19 +16,10 @@
     <%= f.date_select :play_date %>
   </div>
   <div class="field">
-<<<<<<< HEAD
-    <%= f.label :team_1_id %><br>
-    <%= f.number_field :team_1_id %>
-  </div>
-  <div class="field">
-    <%= f.label :team_2_id %><br>
-    <%= f.number_field :team_2_id %>
-=======
     <%= f.collection_select(:team_1_id, Team.all, :id, :name, :class => "btn") %>
   </div>
   <div class="field">
     <%= f.collection_select(:team_2_id, Team.all, :id, :name) %>
->>>>>>> 0b555df0926b2c83562722522c976766d3a0aca6
   </div>
   <div class="field">
     <%= f.label :season_of_competition_id %><br>
