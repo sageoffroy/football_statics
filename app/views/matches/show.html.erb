@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Play date:</strong>
+  <%= @match.play_date %>
+</p>
+
+<p>
+  <strong>Team 1:</strong>
+  <%=Team.where(id:@match.team_1_id).first().name %>
+</p>
+
+<p>
+  <strong>Team 2:</strong>
+  <%=Team.where(id:@match.team_2_id).first().name %>
+</p>
+
+<p>
+  <strong>Season of competition:</strong>
+  <%= @match.season_of_competition %>
+</p>
+
+<%= link_to 'Edit', edit_match_path(@match) %> |
+<%= link_to 'Back', matches_path %>
+

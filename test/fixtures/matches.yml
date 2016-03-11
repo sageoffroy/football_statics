@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  play_date: 2016-03-09
+  team_1_id: 
+  team_2_id: 
+  season_of_competition_id: 
+
+two:
+  play_date: 2016-03-09
+  team_1_id: 
+  team_2_id: 
+  season_of_competition_id: 
