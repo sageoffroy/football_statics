@@ -12,6 +12,12 @@ class MatchesController < ApplicationController
   def show
   end
 
+
+  def start
+    set_match
+    redirect_to "matches/start"
+  end
+
   # GET /matches/new
   def new
     @match = Match.new

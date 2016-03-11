@@ -9,7 +9,7 @@
       <th>Team 1</th>
       <th>Team 2</th>
       <th>Season of competition</th>
-      <th colspan="3"></th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
@@ -20,9 +20,10 @@
         <td><%= match.team_1_id %></td>
         <td><%= match.team_2_id %></td>
         <td><%= match.season_of_competition %></td>
-        <td><%= link_to 'Show', match %></td>
-        <td><%= link_to 'Edit', edit_match_path(match) %></td>
-        <td><%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', match %></td>
+        <td><%= link_to 'Editar', edit_match_path(match) %></td>
+        <td><%= link_to 'Borrar', match, method: :delete, data: { confirm: '¿ Esta seguro qe desea eliminar este partido?' } %></td>
+        <td><%= link_to 'Comenzar', "/start_match/"+ match.id.to_s %></td>
       </tr>
     <% end %>
   </tbody>

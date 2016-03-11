@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :matches
   resources :stat_of_player_of_team_of_matches
   resources :stats
   resources :player_of_team_matches
@@ -15,6 +14,10 @@ Rails.application.routes.draw do
   resources :nationalities
   resources :people
   get 'welcome/index'
+
+
+  resources :matches
+  get '/start_match/:id' => 'matches#start', as: 'start_match'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # The priority is based upon order of creation: first created -> highest priority.
