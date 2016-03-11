@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :competition_types
   resources :competitions
   resources :seasons
   resources :season_of_competitions
+=======
+>>>>>>> 0b555df0926b2c83562722522c976766d3a0aca6
   resources :matches
   resources :stat_of_player_of_team_of_matches
   resources :stats

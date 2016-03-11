@@ -2,7 +2,11 @@
 
 <h1>Listing Matches</h1>
 
+<<<<<<< HEAD
 <table>
+=======
+<table class="table">
+>>>>>>> 0b555df0926b2c83562722522c976766d3a0aca6
   <thead>
     <tr>
       <th>Play date</th>
@@ -15,7 +19,11 @@
 
   <tbody>
     <% @matches.each do |match| %>
+<<<<<<< HEAD
       <tr>
+=======
+      <tr id="<%= match.id %>">
+>>>>>>> 0b555df0926b2c83562722522c976766d3a0aca6
         <td><%= match.play_date %></td>
         <td><%= match.team_1_id %></td>
         <td><%= match.team_2_id %></td>
@@ -30,4 +38,30 @@
 
 <br>
 
+<<<<<<< HEAD
 <%= link_to 'New Match', new_match_path %>
+=======
+<%= link_to 'New Match', new_match_path, :class => "btn btn-primary" %>
+
+<script type="text/javascript">
+
+$(function(){
+    $('.table > tbody > tr').each(function(){
+        $(this).css('cursor','pointer').hover(
+            function(){ 
+                $(this).addClass('active'); 
+            },  
+            function(){ 
+                $(this).removeClass('active'); 
+            }).click( function(){ 
+                document.location = "/matches/"+$(this).attr('id'); 
+            }
+        );
+    });
+});
+
+
+
+
+</script>
+>>>>>>> 0b555df0926b2c83562722522c976766d3a0aca6
