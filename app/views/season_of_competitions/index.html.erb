@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Season Of Competitions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Season</th>
+      <th>Competition</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @season_of_competitions.each do |season_of_competition| %>
+      <tr>
+        <td><%= season_of_competition.season %></td>
+        <td><%= season_of_competition.competition %></td>
+        <td><%= season_of_competition.name %></td>
+        <td><%= link_to 'Show', season_of_competition %></td>
+        <td><%= link_to 'Edit', edit_season_of_competition_path(season_of_competition) %></td>
+        <td><%= link_to 'Destroy', season_of_competition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Season of competition', new_season_of_competition_path %>

@@ -1,6 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+<<<<<<< HEAD
+  play_date: 2016-03-10
+  team_1_id: 1
+  team_2_id: 1
+  season_of_competition_id: 
+
+two:
+  play_date: 2016-03-10
+  team_1_id: 1
+  team_2_id: 1
+=======
   play_date: 2016-03-09
   team_1_id: 
   team_2_id: 
@@ -10,4 +21,5 @@ two:
   play_date: 2016-03-09
   team_1_id: 
   team_2_id: 
+>>>>>>> 0b555df0926b2c83562722522c976766d3a0aca6
   season_of_competition_id: 
